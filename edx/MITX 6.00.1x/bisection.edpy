@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Sep 14 15:19:39 2018
+
+@author: anthony
+"""
+
+
+
+
+print('Please think of a number between 0 and 100!')
+
+low = 0
+max = 100
+too_high = 'h'
+too_low = 'l'
+correct = 'c'
+guess = (low + max)// 2
+iterations = 0
+guessed = False
+
+while not guessed:
+    guess = (low + max)//2 
+    iterations += 1
+    print('Is your secret number ', str(guess), '?', end = '')
+    question = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly." )
+    if question == correct.lower():
+        guessed = True
+        print('Game over. Your secret number was: ', str(guess))
+    elif question == too_low.lower():
+        low = guess
+    elif question == too_high.lower():
+        max = guess
+    else:
+        print('Sorry, I did not understand your input.') 
+        
+        
+        
+        
+balance = 5000
+int_rate = 0.18
+monthly_rate = 0.18/12
+min_pay = balance * monthly_rate
+unpaid_bal = balance - min_pay
+interest = monthly_rate * unpaid_bal
+due = unpaid_bal + interest
+
+month = 0
+
+for month in range(0,12):
+        balance = 5000
+        int_rate = 0.18
+        monthly_rate = 0.18/12
+        min_pay = balance * monthly_rate
+        balance = balance - min_pay
+        interest = monthly_rate * balance
+        due = balance + interest
+        month += 1
+        balance = due
+        print(balance)
+
+
+
+balance = 42
+month = 0
+balance = 42
+annualInterestRate = 0.2
+monthlyPaymentRate = 0.04
+
+
+while month < 12:
+        int_rate = annualInterestRate
+        monthly_rate = annualInterestRate/12
+        min_pay = balance * monthly_rate
+        balance = balance - min_pay
+        interest = monthly_rate * balance
+        due = round(balance + interest, 2)
+        month += 1
+        balance = due
+        print(balance)
+        
+        
+        
+        
+
+
+            
+    
+    
+
